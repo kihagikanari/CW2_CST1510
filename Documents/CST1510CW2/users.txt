@@ -1,0 +1,5 @@
+kip:$2b$12$KHZ6nXV6ohPjHmmn/hQKQeqc4xx8ko.idkmeMRppwjZrB/JSBX.Ga
+abulrahman:$2b$12$6YNWsdm9Il3lFX5.SufC.OpQ.Xy5Ie44BKrPAV7CEqJK8B0beYyd.
+josh:$2b$12$pXpRkYlv.YlbpP7lrJogeOfl8IpYRGckY9wC3QqS1/h9EeEi.C.OW
+alice:$2b$12$GdSJl8uYtJCqkp5XHNp1qO0KLsuFV6yrY6ErnSrD0lMnAq7H0aYAK
+Yusuf:$2b$12$DpE1VW2d6g788nkHxoc.nOBNNYdobfOg6xpQ/is/ysD2lZWsGonPm
