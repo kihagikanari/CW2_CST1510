@@ -1,9 +1,7 @@
 from pathlib import Path
 import sqlite3
 
-DATA_DIR = Path("DATA")
-DB_PATH = "intelligence_platform.db"
-
+DB_PATH = Path("intelligence_platform.db")
 
 def connect_database(db_path=DB_PATH):
     """

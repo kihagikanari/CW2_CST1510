@@ -1,4 +1,3 @@
-from app.data.db import connect_database
 from app.data.db import *
 from app.data.schema import create_all_tables
 from app.data.users import migrate_users_from_file, register_user, login_user

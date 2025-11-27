@@ -1,4 +1,4 @@
-from app.data.db import DATA_DIR, connect_database
+from app.data.db import connect_database
 from pathlib import Path
 import pandas as pd
 
@@ -102,7 +102,7 @@ def load_all_csv_data(conn):
     total_rows = 0
 
     print("\nloading datasets_metadata.csv...")
-    total_rows += load_csv_to_table(conn, DATA_DIR / "datasets_metadata.csv", "datasets_metadata")
+    total_rows += load_csv_to_table(conn, "DATA/datasets_metadata.csv", "datasets_metadata")
 
 
     print(f"\n Total rows loaded: {total_rows}")

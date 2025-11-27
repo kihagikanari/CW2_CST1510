@@ -1,4 +1,5 @@
-from app.data.db import connect_database, DATA_DIR
+from app.data.db import connect_database
+from pathlib import Path
 import bcrypt
 import sqlite3
 
@@ -75,7 +76,7 @@ def login_user(username, password):
     else:
         return False, "Invalid password."
 
-def migrate_users_from_file(conn, filepath=DATA_DIR / "users.txt"):
+def migrate_users_from_file(conn, filepath="DATA/users.txt"):
     """
     Migrate users from users.txt to the database.
 
@@ -85,6 +86,7 @@ def migrate_users_from_file(conn, filepath=DATA_DIR / "users.txt"):
         conn: Database connection
         filepath: Path to users.txt file
     """
+    filepath = Path(filepath)
     if not filepath.exists():
         print(f"⚠️  File not found: {filepath}")
         print("   No users to migrate.")

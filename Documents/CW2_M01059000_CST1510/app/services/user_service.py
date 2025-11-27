@@ -1,7 +1,8 @@
-from app.data.db import connect_database, DATA_DIR
+from app.data.db import connect_database
+from pathlib import Path
 import sqlite3
 
-def migrate_users_from_file(conn, filepath=DATA_DIR / "users.txt"):
+def migrate_users_from_file(conn, filepath="DATA/users.txt"):
     """
     Migrate users from users.txt to the database.
 
@@ -11,6 +12,7 @@ def migrate_users_from_file(conn, filepath=DATA_DIR / "users.txt"):
         conn: Database connection
         filepath: Path to users.txt file
     """
+    filepath = Path(filepath)
     if not filepath.exists():
         print(f"⚠️  File not found: {filepath}")
         print("   No users to migrate.")

@@ -1,4 +1,4 @@
-from app.data.db import connect_database, DATA_DIR
+from app.data.db import connect_database
 from pathlib import Path
 import pandas as pd
 
@@ -92,6 +92,7 @@ def load_csv_to_table(conn, csv_path, table_name):
         int: Number of rows loaded
     """
     # TODO: Check if CSV file exists
+    csv_path = Path(csv_path)
     if not csv_path.exists():
         print(f"File not found: {csv_path}")
         return 0
@@ -128,7 +129,7 @@ def load_all_csv_data(conn):
     total_rows = 0
 
     print("\nloading it_tickets.csv...")
-    total_rows += load_csv_to_table(conn, DATA_DIR / "it_tickets.csv", "it_tickets")
+    total_rows += load_csv_to_table(conn, "DATA/it_tickets.csv", "it_tickets")
 
     print(f"\n Total rows loaded: {total_rows}")
     return total_rows
