@@ -1,0 +1,6 @@
+Python 3.13
+bcrypt
+pandas
+Sqlite3
+streamlit
+google-generativeai
